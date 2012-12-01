@@ -1,0 +1,445 @@
+<html>
+<head>
+<style>
+div {
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+}
+
+#world {
+    width: 200px;
+    height: 200px;
+    top: 200px;
+    left: 200px;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+    -webkit-transform-origin: 0px 0px 0px;
+       -moz-transform-origin: 0px 0px 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+       -moz-transform: translate3d(0px, 0px, 0px);
+    -webkit-animation: spin 15s linear infinite;
+       -moz-animation: spin 15s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+      -webkit-transform: rotateY(0deg) rotateX(-3deg);
+  }
+  to {
+      -webkit-transform: rotateY(-360deg) rotateX(-3deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+      -moz-transform: rotateY(0deg) rotateX(-3deg);
+  }
+  to {
+      -moz-transform: rotateY(-360deg) rotateX(-3deg);
+  }
+}
+
+div.cube {
+    height: 80px;
+    width: 80px;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+}
+
+div.cube.cube1 {
+-webkit-transform: translate3d(-10px, -110px, 0px);
+   -moz-transform: translate3d(-10px, -110px, 0px);
+}
+div.cube.cube2 {
+-webkit-transform: translate3d(-110px, -10px, 0px);
+   -moz-transform: translate3d(-110px, -10px, 0px);
+}
+div.cube.cube3 {
+-webkit-transform: translate3d(90px, -10px, 0px);
+   -moz-transform: translate3d(90px, -10px, 0px);
+}
+div.cube.cube4 {
+-webkit-transform: translate3d(-10px, 90px, 0px);
+   -moz-transform: translate3d(-10px, 90px, 0px);
+}
+div.cube.cube5 {
+-webkit-transform: translate3d(-10px, -10px, -100px);
+   -moz-transform: translate3d(-10px, -10px, -100px);
+}
+div.cube.cube6 {
+-webkit-transform: translate3d(-10px, -10px, 100px);
+   -moz-transform: translate3d(-10px, -10px, 100px);
+}
+
+div.cube > div {
+    width: 30px;
+    height:30px;
+    border: solid 1px black;
+    background-color: #ffffff;
+}
+
+div.cube > div.face1 {
+-webkit-transform: rotateY(0deg) translate3d(-15px, -15px, 30px);
+   -moz-transform: rotateY(0deg) translate3d(-15px, -15px, 30px);
+}
+div.cube > div.face2 {
+-webkit-transform: rotateY(0deg) translate3d(15px, -15px, 30px);
+   -moz-transform: rotateY(0deg) translate3d(15px, -15px, 30px);
+}
+div.cube > div.face3 {
+-webkit-transform: rotateY(0deg) translate3d(-15px, 15px, 30px);
+   -moz-transform: rotateY(0deg) translate3d(-15px, 15px, 30px);
+}
+div.cube > div.face4 {
+-webkit-transform: rotateY(0deg) translate3d(15px, 15px, 30px);
+   -moz-transform: rotateY(0deg) translate3d(15px, 15px, 30px);
+}
+
+div.cube > div.face5 {
+-webkit-transform: rotateY(0deg) translate3d(-15px, -15px, -30px);
+   -moz-transform: rotateY(0deg) translate3d(-15px, -15px, -30px);
+}
+div.cube > div.face6 {
+-webkit-transform: rotateY(0deg) translate3d(15px, -15px, -30px);
+   -moz-transform: rotateY(0deg) translate3d(15px, -15px, -30px);
+}
+div.cube > div.face7 {
+-webkit-transform: rotateY(0deg) translate3d(-15px, 15px, -30px);
+   -moz-transform: rotateY(0deg) translate3d(-15px, 15px, -30px);
+}
+div.cube > div.face8 {
+-webkit-transform: rotateY(0deg) translate3d(15px, 15px, -30px);
+   -moz-transform: rotateY(0deg) translate3d(15px, 15px, -30px);
+}
+
+div.cube > div.face9 {
+-webkit-transform: rotateY(90deg) translate3d(-15px, -15px, 30px);
+   -moz-transform: rotateY(90deg) translate3d(-15px, -15px, 30px);
+}
+div.cube > div.face10 {
+-webkit-transform: rotateY(90deg) translate3d(15px, -15px, 30px);
+   -moz-transform: rotateY(90deg) translate3d(15px, -15px, 30px);
+}
+div.cube > div.face11 {
+-webkit-transform: rotateY(90deg) translate3d(-15px, 15px, 30px);
+   -moz-transform: rotateY(90deg) translate3d(-15px, 15px, 30px);
+}
+div.cube > div.face12 {
+-webkit-transform: rotateY(90deg) translate3d(15px, 15px, 30px);
+   -moz-transform: rotateY(90deg) translate3d(15px, 15px, 30px);
+}
+
+div.cube > div.face13 {
+-webkit-transform: rotateY(90deg) translate3d(-15px, -15px, -30px);
+   -moz-transform: rotateY(90deg) translate3d(-15px, -15px, -30px);
+}
+div.cube > div.face14 {
+-webkit-transform: rotateY(90deg) translate3d(15px, -15px, -30px);
+   -moz-transform: rotateY(90deg) translate3d(15px, -15px, -30px);
+}
+div.cube > div.face15 {
+-webkit-transform: rotateY(90deg) translate3d(-15px, 15px, -30px);
+   -moz-transform: rotateY(90deg) translate3d(-15px, 15px, -30px);
+}
+div.cube > div.face16 {
+-webkit-transform: rotateY(90deg) translate3d(15px, 15px, -30px);
+   -moz-transform: rotateY(90deg) translate3d(15px, 15px, -30px);
+}
+
+div.cube > div.face17 {
+-webkit-transform: rotateX(90deg) translate3d(-15px, -15px, 30px);
+   -moz-transform: rotateX(90deg) translate3d(-15px, -15px, 30px);
+}
+div.cube > div.face18 {
+-webkit-transform: rotateX(90deg) translate3d(15px, -15px, 30px);
+   -moz-transform: rotateX(90deg) translate3d(15px, -15px, 30px);
+}
+div.cube > div.face19 {
+-webkit-transform: rotateX(90deg) translate3d(-15px, 15px, 30px);
+   -moz-transform: rotateX(90deg) translate3d(-15px, 15px, 30px);
+}
+div.cube > div.face20 {
+-webkit-transform: rotateX(90deg) translate3d(15px, 15px, 30px);
+   -moz-transform: rotateX(90deg) translate3d(15px, 15px, 30px);
+}
+
+div.cube > div.face21 {
+-webkit-transform: rotateX(90deg) translate3d(-15px, -15px, -30px);
+   -moz-transform: rotateX(90deg) translate3d(-15px, -15px, -30px);
+}
+div.cube > div.face22 {
+-webkit-transform: rotateX(90deg) translate3d(15px, -15px, -30px);
+   -moz-transform: rotateX(90deg) translate3d(15px, -15px, -30px);
+}
+div.cube > div.face23 {
+-webkit-transform: rotateX(90deg) translate3d(-15px, 15px, -30px);
+   -moz-transform: rotateX(90deg) translate3d(-15px, 15px, -30px);
+}
+div.cube > div.face24 {
+-webkit-transform: rotateX(90deg) translate3d(15px, 15px, -30px);
+   -moz-transform: rotateX(90deg) translate3d(15px, 15px, -30px);
+}
+
+div.axis {
+    width: 70px;
+    height: 70px;
+    border-top: solid 1px black;
+    border-left: solid 1px black;    
+    -webkit-transform-origin: 0px 0px 0px;
+       -moz-transform-origin: 0px 0px 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+       -moz-transform: translate3d(0px, 0px, 0px);
+}
+div.axis.axis1{
+}
+div.axis.axis2{
+-webkit-transform: rotateZ(-90deg);
+   -moz-transform: rotateZ(-90deg);
+}
+div.axis.axis3{
+-webkit-transform: rotateZ(180deg);
+   -moz-transform: rotateZ(180deg);
+}
+div.axis.axis4{
+-webkit-transform: rotateZ(90deg);
+   -moz-transform: rotateZ(90deg);
+}
+
+div.axis.axis5{
+-webkit-transform: rotateY(90deg);
+   -moz-transform: rotateY(90deg);
+}
+div.axis.axis6{
+-webkit-transform: rotateY(90deg) rotateZ(-90deg);
+   -moz-transform: rotateY(90deg) rotateZ(-90deg);
+}
+div.axis.axis7{
+-webkit-transform: rotateY(90deg) rotateZ(180deg);
+   -moz-transform: rotateY(90deg) rotateZ(180deg);
+}
+div.axis.axis8{
+-webkit-transform: rotateY(90deg) rotateZ(90deg);
+   -moz-transform: rotateY(90deg) rotateZ(90deg);
+}
+
+div.cube1 > div.p5 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+div.cube2 > div.p6 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+div.cube3 > div.p4 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+div.cube4 > div.p3 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+div.cube5 > div.p3 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+div.cube6 > div.p6 {
+background-color: rgba(0, 0, 0, 0.5);
+}
+</style>
+</head>
+<body>
+for Chrome Browser
+<div id="world">
+    <div class="axis axis1"></div>
+    <div class="axis axis2"></div>
+    <div class="axis axis3"></div>
+    <div class="axis axis4"></div>
+    <div class="axis axis5"></div>
+    <div class="axis axis6"></div>
+    <div class="axis axis7"></div>
+    <div class="axis axis8"></div>
+    <div class="cube cube1">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+    <div class="cube cube2">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+    <div class="cube cube3">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+    <div class="cube cube4">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+    <div class="cube cube5">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+    <div class="cube cube6">
+        <div class="face1 p1 p4 p5"></div>
+        <div class="face2 p1 p3 p5"></div>
+        <div class="face3 p1 p4 p6"></div>
+        <div class="face4 p1 p3 p6"></div>
+        
+        <div class="face5 p2 p4 p5"></div>
+        <div class="face6 p2 p3 p5"></div>
+        <div class="face7 p2 p4 p6"></div>
+        <div class="face8 p2 p3 p6"></div>
+        
+        <div class="face9 p1 p3 p5"></div>
+        <div class="face10 p2 p3 p5"></div>
+        <div class="face11 p3 p1 p6"></div>
+        <div class="face12 p2 p3 p6"></div>
+        
+        <div class="face13 p1 p4 p5"></div>
+        <div class="face14 p2 p4 p5"></div>
+        <div class="face15 p1 p4 p6"></div>
+        <div class="face16 p2 p4 p6"></div>
+        
+        <div class="face17 p2 p4 p5"></div>
+        <div class="face18 p2 p3 p5"></div>
+        <div class="face19 p1 p4 p5"></div>
+        <div class="face20 p1 p3 p5"></div>
+        
+        <div class="face21 p2 p4 p6"></div>
+        <div class="face22 p2 p3 p6"></div>
+        <div class="face23 p1 p4 p6"></div>
+        <div class="face24 p1 p3 p6"></div>
+    </div>
+</div>
+</body>
+</html>

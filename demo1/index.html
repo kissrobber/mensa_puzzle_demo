@@ -1,0 +1,100 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<style>
+.triangle_d {
+  width: 0;
+  height: 0;
+  border-top: 86px solid;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+.triangle_u {
+  width: 0;
+  height: 0;
+  border-bottom: 86px solid;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+.btn{
+    margin: 10px;
+    font-size: x-large;
+}
+</style>
+<script>
+$(function() {
+    var t1 = $("#t1");
+    var t2 = $("#t2");
+    var t3 = $("#t3");
+    var t4 = $("#t4");
+    var t5 = $("#t5");
+    var t6 = $("#t6");
+
+    t1.offset({
+        top: 86,
+        left: 136
+    });
+    t2.offset({
+        top: 172,
+        left: 86
+    });
+    t3.offset({
+        top: 172,
+        left: 186
+    });
+    t4.offset({
+        top: 258,
+        left: 86
+    });
+    t5.offset({
+        top: 258,
+        left: 186
+    });
+    t6.offset({
+        top: 344,
+        left: 136
+    });
+
+    $.each([t1, t2, t3, t4, t5, t6], function(i, v) {
+        var col = "#" + (i % 2 === 0 ? "0" : "f") + "0" + (i + 4) + "0" + (9 - i) + "0";
+        v.css("border-color", (i < 3 ? col : "") + " transparent transparent " + (i >= 3 ? col : "") + "  transparent");
+    });
+
+    var step = function() {
+        t1.animate({
+            "top": "+=86px"
+        }, "slow");
+        t2.animate({
+            "left": "+=50px"
+        }, "slow");
+        t3.animate({
+            "left": "-=50px"
+        }, "slow");
+        t4.animate({
+            "left": "+=50px"
+        }, "slow");
+        t5.animate({
+            "left": "-=50px"
+        }, "slow");
+        t6.animate({
+            "top": "-=86px"
+        }, "slow");
+    };
+    $("#btn").click(function() {
+        step();
+        step();
+        step();
+    });
+});
+</script>
+</head>
+<body>
+<input type="button" id="btn" value="answer!" class="btn"/>
+<div class="triangle_1 triangle_d" id="t1"></div>
+<div class="triangle_2 triangle_d" id="t2"></div>
+<div class="triangle_3 triangle_d" id="t3"></div>
+<div class="triangle_4 triangle_u" id="t4"></div>
+<div class="triangle_5 triangle_u" id="t5"></div>
+<div class="triangle_6 triangle_u" id="t6"></div>
+</body>
+</html>
